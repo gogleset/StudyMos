@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface IconProps {
   src: string;
@@ -10,10 +11,10 @@ interface IconProps {
 
 const Icon: React.FC<IconProps> = ({ src, alt, className, onClick }) => {
   return (
-    <img
+    <Image
       src={src}
       alt={alt}
-      className={cn("w-6 h-6 object-contain", className)}
+      className={cn("size-6 object-contain", className)}
       onClick={onClick}
     />
   );
